@@ -15,13 +15,17 @@ https://docs.nativescript.org/ui/components.
     </Page.actionBar>
     <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
         <StackLayout orientation="vertical" backgroundColor="skyblue">
-            <AbsoluteLayout width="210" height="210" backgroundColor="lightgray" horizontalAlignment="left">
+            <!-- Sample -->
+            <Label text="Sample" class="h3 text-center" textWrap="true"/>
+            <AbsoluteLayout horizontalAlignment="center" width="210" height="210" backgroundColor="lightgray" >
                 <Label text="10, 10" left="10" top="10" width="90" height="90" backgroundColor="red"/>
                 <Label text="110, 10" left="110" top="10" width="90" height="90" backgroundColor="green"/>
                 <Label text="110, 110" left="110" top="110" width="90" height="90" backgroundColor="blue"/>
                 <Label text="10, 110" left="10" top="110" width="90" height="90" backgroundColor="yellow"/>
             </AbsoluteLayout>
-            <AbsoluteLayout width="210" height="210" backgroundColor="lightgray" horizontalAlignment="center">
+            <!-- Sample (margin) -->
+            <Label text="Sample (margin)" class="h3 text-center" textWrap="true"/>
+            <AbsoluteLayout horizontalAlignment="center" idth="210" height="210" backgroundColor="lightgray" >
                 <Label text="no margin" left="10" top="10" width="100" height="100" backgroundColor="red"/>
                 <Label text="margin='30'" left="10" top="10" margin="30" width="100" height="90" backgroundColor="green"/>
             </AbsoluteLayout>

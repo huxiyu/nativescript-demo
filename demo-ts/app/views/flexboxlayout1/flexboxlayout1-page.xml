@@ -1,0 +1,70 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="flexboxlayout1" icon="" class="action-bar"></ActionBar>
+    </Page.actionBar>
+    <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
+        <StackLayout orientation="vertical" backgroundColor="skyblue">
+            <!-- content start -->
+            <!-- Sample (flexDirection="row", alignItems="stretch" (default)) -->
+            <Label text='Sample (flexDirection="row", alignItems="stretch" (default))' class="h3 text-center" textWrap="true"/>
+            <FlexboxLayout width="300" height="300" backgroundColor="lightgray">
+                <Label text="Label 1" width="70" height="70" backgroundColor="red"/>
+                <Label text="Label 2" width="70" height="70" backgroundColor="green"/>
+                <Label text="Label 3" width="70" height="70" backgroundColor="blue"/>
+                <Label text="Label 4" width="70" height="70" backgroundColor="yellow"/>
+            </FlexboxLayout>
+            <!-- Sample (flexDirection="column", alignItems="stretch" (default)) -->
+            <Label text='Sample (flexDirection="column", alignItems="stretch" (default))' class="h3 text-center" textWrap="true"/>
+            <FlexboxLayout flexDirection="column" width="300" height="300" backgroundColor="lightgray">
+                <Label text="Label 1" width="70" height="70" backgroundColor="red"/>
+                <Label text="Label 2" width="70" height="70" backgroundColor="green"/>
+                <Label text="Label 3" width="70" height="70" backgroundColor="blue"/>
+                <Label text="Label 4" width="70" height="70" backgroundColor="yellow"/>
+            </FlexboxLayout>
+            <!-- Sample (flexDirection="row", alignItems="flex-start") -->
+            <Label text='Sample (flexDirection="row", alignItems="flex-start")' class="h3 text-center" textWrap="true"/>
+            <FlexboxLayout alignItems="flex-start" width="300" height="300" backgroundColor="lightgray">
+                <Label text="Label 1" width="70" height="70" backgroundColor="red"/>
+                <Label text="Label 2" width="70" height="70" backgroundColor="green"/>
+                <Label text="Label 3" width="70" height="70" backgroundColor="blue"/>
+                <Label text="Label 4" width="70" height="70" backgroundColor="yellow"/>
+            </FlexboxLayout>
+            <!-- Sample (flexDirection="row", custom order) -->
+            <Label text='Sample (flexDirection="row", custom order)' class="h3 text-center" textWrap="true"/>
+            <FlexboxLayout alignItems="flex-start" width="300" height="300" backgroundColor="lightgray">
+                <Label order="3" text="Label 1" width="70" height="70" backgroundColor="red"/>
+                <Label order="4" text="Label 2" width="70" height="70" backgroundColor="green"/>
+                <Label order="2" text="Label 3" width="70" height="70" backgroundColor="blue"/>
+                <Label order="1" text="Label 4" width="70" height="70" backgroundColor="yellow"/>
+            </FlexboxLayout>
+            <!-- Sample (flexWrap="wrap") -->
+            <Label text='Sample (flexWrap="wrap")' class="h3 text-center" textWrap="true"/>
+            <FlexboxLayout flexWrap="wrap" height="300" width="300" backgroundColor="lightgray">
+                <Label text="Label 1" width="100" height="50" backgroundColor="red"/>
+                <Label text="Label 2" width="100" height="50" backgroundColor="green"/>
+                <Label text="Label 3" width="100" height="50" backgroundColor="blue"/>
+                <Label text="Label 4" width="100" height="50" backgroundColor="yellow"/>
+            </FlexboxLayout>
+            <!-- Sample (flexDirection="column-reverse", justifyContent="space-around", alignSelf) -->
+            <Label text='Sample (flexDirection="column-reverse", justifyContent="space-around", alignSelf)' class="h3 text-center" textWrap="true"/>
+            <FlexboxLayout flexDirection="column-reverse" justifyContent="space-around" alignItems="stretch" height="300" width="300" backgroundColor="lightgray">
+                <Label text="Label 1" width="50" height="50" backgroundColor="red"/>
+                <Label alignSelf="center" text="Label 2" width="50" height="50" backgroundColor="green"/>
+                <Label alignSelf="flex-end" text="Label 3" width="50" height="50" backgroundColor="blue"/>
+                <Label text="Label 4" width="50" height="50" backgroundColor="yellow"/>
+            </FlexboxLayout>
+            <!-- content end -->
+        </StackLayout>
+    </ScrollView>
+</Page>

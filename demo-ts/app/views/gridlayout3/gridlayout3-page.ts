@@ -28,6 +28,7 @@ export function navigatingTo(args: EventData) {
 export function pageLoaded(args: EventData) {
    // Grid wrapper
    const grid = new GridLayout();
+   grid.backgroundColor = new Color("green");
 
    // Create title Label and add is as a child to our grid
    const titleLabel = new Label();
@@ -73,8 +74,11 @@ export function pageLoaded(args: EventData) {
    // Assign ColumnSpan for views
    GridLayout.setColumnSpan(infoLabel, 2); // infoLabel set with columnSpan = 2
 
+   // Add Grid to StackLayout
    const page = <Page>args.object;
    const stackLayout = <StackLayout>view.getViewById(page, "stackLayout1");
    stackLayout.addChild(grid);
+
+   // Replace Page content by Grid
 //    page.content = grid;
 }

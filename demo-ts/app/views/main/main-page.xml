@@ -36,7 +36,10 @@ https://docs.nativescript.org/ui/components.
             <Button text="AbsoluteLayout1" tap="frameButtonTap" framename="absolutelayout1" class="btn btn-primary btn-active"/>
             <Button text="DockLayout1" tap="frameButtonTap" framename="docklayout1" class="btn btn-primary btn-active"/>
             <Button text="GridLayout2" tap="frameButtonTap" framename="gridlayout2" class="btn btn-primary btn-active"/>
-            <Button text="GridLayout 代码动态生成" tap="frameButtonTap" framename="gridlayout3" class="btn btn-primary btn-active"/>
+            <Button text="GridLayout3 (Create grid dynamically via code behind)" tap="frameButtonTap" framename="gridlayout3" class="btn btn-primary btn-active"/>
+            <Button text="StackLayout2" tap="frameButtonTap" framename="stacklayout2" class="btn btn-primary btn-active"/>
+            <Button text="WrapLayout1" tap="frameButtonTap" framename="wraplayout1" class="btn btn-primary btn-active"/>
+            <Button text="FlexboxLayout1" tap="frameButtonTap" framename="flexboxlayout1" class="btn btn-primary btn-active"/>
             <!-- Tap Count -->
             <Label text="Tap Count" class="h2 text-center"/>
             <Button text="TAP1" tap="{{ onTap }}" class="btn btn-primary btn-active"/>

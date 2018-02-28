@@ -1,0 +1,54 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="stacklayout2" icon="" class="action-bar"></ActionBar>
+    </Page.actionBar>
+    <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
+        <StackLayout orientation="vertical" backgroundColor="skyblue">
+            <!-- content start -->
+            <!-- Sample (orientation="vertical") -->
+            <Label text='Sample (orientation="vertical")' class="h3 text-center" textWrap="true"/>
+            <StackLayout orientation="vertical" width="210" height="210" backgroundColor="lightgray">
+                <Label text="Label 1" width="50" height="50" backgroundColor="red"/>
+                <Label text="Label 2" width="50" height="50" backgroundColor="green"/>
+                <Label text="Label 3" width="50" height="50" backgroundColor="blue"/>
+                <Label text="Label 4" width="50" height="50" backgroundColor="yellow"/>
+            </StackLayout>
+            <!-- Sample (orientation="horizontal") -->
+            <Label text='Sample (orientation="horizontal")' class="h3 text-center" textWrap="true"/>
+            <StackLayout orientation="horizontal" width="210" height="210" backgroundColor="lightgray">
+                <Label text="Label 1" width="50" height="50" backgroundColor="red"/>
+                <Label text="Label 2" width="50" height="50" backgroundColor="green"/>
+                <Label text="Label 3" width="50" height="50" backgroundColor="blue"/>
+                <Label text="Label 4" width="50" height="50" backgroundColor="yellow"/>
+            </StackLayout>
+            <!-- Sample (horizontal alignment of children) -->
+            <Label text='Sample (horizontal alignment of children)' class="h3 text-center" textWrap="true"/>
+            <StackLayout orientation="vertical" width="210" height="210" backgroundColor="lightgray">
+                <Label text="Label 1" horizontalAlignment="left" backgroundColor="red"/>
+                <Label text="Label 2" horizontalAlignment="center" backgroundColor="green"/>
+                <Label text="Label 3" horizontalAlignment="right" backgroundColor="blue"/>
+                <Label text="Label 4" horizontalAlignment="stretch" backgroundColor="yellow"/>
+            </StackLayout>
+            <!-- Sample (vertical alignment of children) -->
+            <Label text='Sample (vertical alignment of children)' class="h3 text-center" textWrap="true"/>
+            <StackLayout orientation="horizontal" width="210" height="210" backgroundColor="lightgray">
+                <Label text="Label 1" verticalAlignment="top" backgroundColor="red"/>
+                <Label text="Label 2" verticalAlignment="center" backgroundColor="green"/>
+                <Label text="Label 3" verticalAlignment="bottom" backgroundColor="blue"/>
+                <Label text="Label 4" verticalAlignment="stretch" backgroundColor="yellow"/>
+            </StackLayout>
+            <!-- content end -->
+        </StackLayout>
+    </ScrollView>
+</Page>

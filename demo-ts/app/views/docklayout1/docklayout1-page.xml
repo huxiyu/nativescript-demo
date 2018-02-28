@@ -15,19 +15,24 @@ https://docs.nativescript.org/ui/components.
     </Page.actionBar>
     <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
         <StackLayout orientation="vertical" backgroundColor="skyblue">
-            <!-- horizontalAlignment="left" -->
-            <DockLayout width="210" height="210" backgroundColor="lightgray" stretchLastChild="false" horizontalAlignment="left">
+            <!-- Sample (stretchLastChild="false") -->
+            <Label text='Sample (stretchLastChild="false")' class="h3 text-center" textWrap="true"/>
+            <DockLayout width="210" height="210" backgroundColor="lightgray" stretchLastChild="false" >
                 <Label text="left" dock="left" width="60" backgroundColor="red"/>
                 <Label text="top" dock="top" height="60" backgroundColor="green"/>
                 <Label text="right" dock="right" width="60" backgroundColor="blue"/>
                 <Label text="bottom" dock="bottom" height="60" backgroundColor="yellow"/>
             </DockLayout>
+            <!-- Sample (stretchLastChild="true") -->
+            <Label text='Sample (stretchLastChild="true")' class="h3 text-center" textWrap="true"/>
             <DockLayout width="210" height="210" backgroundColor="lightgray" stretchLastChild="true">
                 <Label text="left" dock="left" backgroundColor="red"/>
                 <Label text="top" dock="top" backgroundColor="green"/>
                 <Label text="right" dock="right" backgroundColor="blue"/>
                 <Label text="bottom" dock="bottom" backgroundColor="yellow"/>
             </DockLayout>
+            <!-- Sample (multiple child elements on one side) -->
+            <Label text='Sample (multiple child elements on one side)' class="h3 text-center" textWrap="true"/>
             <DockLayout width="210" height="210" backgroundColor="lightgray" stretchLastChild="true">
                 <Label text="left1" dock="left" backgroundColor="red"/>
                 <Label text="left2" dock="left" backgroundColor="green"/>

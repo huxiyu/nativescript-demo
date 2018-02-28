@@ -15,8 +15,9 @@ https://docs.nativescript.org/ui/components.
     </Page.actionBar>
     <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
         <StackLayout orientation="vertical" backgroundColor="skyblue">
-            <!-- horizontalAlignment="left" -->
-            <GridLayout columns="50, auto, *" horizontalAlignment="left" rows="50, auto, *" width="210" height="210" backgroundColor="lightgray">
+            <!-- Sample -->
+            <Label text='Sample' class="h3 text-center" textWrap="true"/>
+            <GridLayout columns="70, auto, *" rows="50, auto, *" width="210" height="210" backgroundColor="lightgray">
                 <Label text="Label 1" row="0" col="0" backgroundColor="red"/>
                 <Label text="Label 2" row="0" col="1" colSpan="2" backgroundColor="green"/>
                 <Label text="Label 3" row="1" col="0" rowSpan="2" backgroundColor="blue"/>
@@ -25,32 +26,44 @@ https://docs.nativescript.org/ui/components.
                 <Label text="Label 6" row="2" col="1" backgroundColor="pink"/>
                 <Label text="Label 7" row="2" col="2" backgroundColor="purple"/>
             </GridLayout>
+            <!-- Sample (star-sizing) -->
+            <Label text='Sample (star-sizing)' class="h3 text-center" textWrap="true"/>
             <GridLayout columns="*,2*" rows="2*,3*" width="300" height="300" backgroundColor="lightgray">
                 <Label text="Label 1" col="0" row="0" backgroundColor="red"/>
                 <Label text="Label 2" col="1" row="0" backgroundColor="green"/>
                 <Label text="Label 3" col="0" row="1" backgroundColor="blue"/>
                 <Label text="Label 4" col="1" row="1" backgroundColor="yellow"/>
             </GridLayout>
-            <GridLayout columns="100,auto" horizontalAlignment="right" rows="100,auto" width="210" height="210" backgroundColor="lightgray">
+            <!-- Sample (fixed and auto) -->
+            <Label text='Sample (fixed and auto)' class="h3 text-center" textWrap="true"/>
+            <GridLayout columns="100,auto" rows="100,auto" width="210" height="210" backgroundColor="lightgray">
                 <Label text="Label 1" col="0" row="0" backgroundColor="red"/>
                 <Label text="Label 2" col="1" row="0" backgroundColor="green"/>
                 <Label text="Label 3" col="0" row="1" backgroundColor="blue"/>
                 <Label text="Label 4" col="1" row="1" backgroundColor="yellow"/>
             </GridLayout>
-            <GridLayout columns="*,2*" horizontalAlignment="left" verticalAlignment="top" backgroundColor="lightgray">
-                <Label text="Label 1" col="0" backgroundColor="red"/>
-                <Label text="Label 2" col="1" backgroundColor="green"/>
-            </GridLayout>
+            <!-- Sample (no width and horizontalAlignment != stretch) -->
+            <Label text='Sample (no width and horizontalAlignment != stretch)' class="h3 text-center" textWrap="true"/>
+            <StackLayout width="200" height="200" backgroundColor="palegreen">
+                <GridLayout columns="*,2*" horizontalAlignment="left" verticalAlignment="top" backgroundColor="lightgray">
+                    <Label text="Label 1" col="0" backgroundColor="red"/>
+                    <Label text="Label 2" col="1" backgroundColor="green"/>
+                </GridLayout>
+            </StackLayout>
+            <!-- Sample (column stretching) -->
+            <Label text='Sample (column stretching)' class="h3 text-center" textWrap="true"/>
             <GridLayout columns="auto,100" rows="auto,auto" width="300" height="300" backgroundColor="lightgray">
                 <Label text="Label 1" col="0" row="0" backgroundColor="red"/>
                 <Label text="Label 2" col="1" row="0" backgroundColor="green"/>
                 <Label text="Label 3" width="150" col="0" row="1" backgroundColor="blue"/>
             </GridLayout>
+            <!-- Sample (complex) -->
+            <Label text='Sample (complex)' class="h3 text-center" textWrap="true"/>
             <GridLayout columns="auto, *, auto" rows="auto, 25" verticalAlignment="top" backgroundColor="lightgray">
-                <Image src="~/cute.jpg" rowSpan="2" width="72" height="72" margin="3" verticalAlignment="top"/>
-                <Label text="My cat loves the camera" textWrap="true" col="1" colSpan="2" minHeight="50" fontSize="20" margin="3"/>
-                <Label text="John Smith" col="1" row="1" fontSize="14" horizontalAlignment="left" verticalAlignment="bottom" margin="3"/>
-                <Label text="comments: 26" col="2" row="1" color="#10C2B0" fontSize="14" verticalAlignment="bottom" margin="3"/>
+                <Image src="~/cute.jpg" col="0" row="0" rowSpan="2" width="72" height="72" margin="3" verticalAlignment="top"/>
+                <Label text="My cat loves the camera" textWrap="true" col="1" colSpan="2" row="0" minHeight="50" fontSize="20" margin="3" backgroundColor="pink"/>
+                <Label text="John Smith" col="1" row="1" fontSize="14" horizontalAlignment="left" verticalAlignment="bottom" margin="3" backgroundColor="lightyellow"/>
+                <Label text="comments: 26" col="2" row="1" color="#10C2B0" fontSize="14" verticalAlignment="bottom" margin="3" backgroundColor="lightgreen" />
             </GridLayout>
         </StackLayout>
     </ScrollView>
