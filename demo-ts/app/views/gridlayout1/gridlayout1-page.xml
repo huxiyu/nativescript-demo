@@ -1,0 +1,24 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="gridlayout1" icon="" class="action-bar"></ActionBar>
+    </Page.actionBar>
+
+   <GridLayout rows="*, auto" columns="250, *">
+    <Label text="This is Label in row 0, col 0" />
+    <Label text="This is Label in row 0, col 1" col="1" />
+    <Label text="This is Label in row 1, col 0" row="1" />
+    <Label text="This is Label in row 1, col 1" row="1" col="1" />
+    <Label text="This is Label in row 0, col 0" rowSpan="2" colSpan="2" />
+  </GridLayout>
+</Page>
