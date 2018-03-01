@@ -60,7 +60,7 @@ https://docs.nativescript.org/ui/components.
             <!-- Sample (complex) -->
             <Label text='Sample (complex)' class="h3 text-center" textWrap="true"/>
             <GridLayout columns="auto, *, auto" rows="auto, 25" verticalAlignment="top" backgroundColor="lightgray">
-                <Image src="~/cute.jpg" col="0" row="0" rowSpan="2" width="72" height="72" margin="3" verticalAlignment="top"/>
+                <Image src="~/images/cute.jpg" col="0" row="0" rowSpan="2" width="72" height="72" margin="3" verticalAlignment="top"/>
                 <Label text="My cat loves the camera" textWrap="true" col="1" colSpan="2" row="0" minHeight="50" fontSize="20" margin="3" backgroundColor="pink"/>
                 <Label text="John Smith" col="1" row="1" fontSize="14" horizontalAlignment="left" verticalAlignment="bottom" margin="3" backgroundColor="lightyellow"/>
                 <Label text="comments: 26" col="2" row="1" color="#10C2B0" fontSize="14" verticalAlignment="bottom" margin="3" backgroundColor="lightgreen" />

@@ -26,12 +26,14 @@ https://docs.nativescript.org/ui/components.
     -->
     <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
         <StackLayout class="p-20" orientation="vertical">
+            <!-- Basic -->
             <Label text="Basic" class="h2 text-center" textWrap="true"/>
             <Button text="Detail" tap="{{ onFrame }}" class="btn btn-primary btn-active"/>
             <Button text="TabView1" tap="frameButtonTap" framename="tabview1" class="btn btn-primary btn-active"/>
             <Button text="StackLayout1" tap="frameButtonTap" framename="stacklayout1" class="btn btn-primary btn-active"/>
             <Button text="GridLayout1" tap="frameButtonTap" framename="gridlayout1" class="btn btn-primary btn-active"/>
             <Button text="ListView1" tap="frameButtonTap" framename="listview1" class="btn btn-primary btn-active"/>
+            <!-- Layout -->
             <Label text="Layout" class="h2 text-center" textWrap="true"/>
             <Button text="AbsoluteLayout1" tap="frameButtonTap" framename="absolutelayout1" class="btn btn-primary btn-active"/>
             <Button text="DockLayout1" tap="frameButtonTap" framename="docklayout1" class="btn btn-primary btn-active"/>
@@ -40,6 +42,12 @@ https://docs.nativescript.org/ui/components.
             <Button text="StackLayout2" tap="frameButtonTap" framename="stacklayout2" class="btn btn-primary btn-active"/>
             <Button text="WrapLayout1" tap="frameButtonTap" framename="wraplayout1" class="btn btn-primary btn-active"/>
             <Button text="FlexboxLayout1" tap="frameButtonTap" framename="flexboxlayout1" class="btn btn-primary btn-active"/>
+            <!-- Images -->
+            <Label text="Images" class="h2 text-center"/>
+            <Button text="Images1" tap="frameButtonTap" framename="images1" class="btn btn-primary btn-active"/>
+            <!-- Dialogs -->
+            <Label text="Dialogs" class="h2 text-center"/>
+            <Button text="Dialogs1" tap="frameButtonTap" framename="dialogs1" class="btn btn-primary btn-active"/>
             <!-- Tap Count -->
             <Label text="Tap Count" class="h2 text-center"/>
             <Button text="TAP1" tap="{{ onTap }}" class="btn btn-primary btn-active"/>

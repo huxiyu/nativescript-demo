@@ -1,0 +1,50 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="dialog1" icon="" class="action-bar"></ActionBar>
+    </Page.actionBar>
+    <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
+        <StackLayout id="stackLayout1" orientation="vertical" backgroundColor="skyblue">
+            <!-- Alert -->
+            <Label text='Alert' class="h3 text-center" textWrap="true"/>
+            <!-- Alert(Web browser style) -->
+            <Button text="Alert(Web browser style)" tap="alertWebBrowserStyle" class="btn btn-primary btn-active"/>
+            <!-- Alert(Using an options object) -->
+            <Button text="Alert(Using an options object)" tap="alertUsingAnOptionsObject" class="btn btn-primary btn-active"/>
+            <!-- Confirm -->
+            <Label text='Confirm' class="h3 text-center" textWrap="true"/>
+            <!-- Confirm(Web browser style) -->
+            <Button text="Confirm(Web browser style)" tap="confirmWebBrowserStyle" class="btn btn-primary btn-active"/>
+            <!-- Confirm(Using an options object) -->
+            <Button text="Confirm(Using an options object)" tap="confirmUsingAnOptionsObject" class="btn btn-primary btn-active"/>
+            <!-- Prompt -->
+            <Label text='Prompt' class="h3 text-center" textWrap="true"/>
+            <!-- Confirm(Web browser style) -->
+            <Button text="Prompt(Web browser style)" tap="promptWebBrowserStyle" class="btn btn-primary btn-active"/>
+            <!-- Confirm(Using an options object) -->
+            <Button text="Prompt(Using an options object)" tap="promptUsingAnOptionsObject" class="btn btn-primary btn-active"/>
+            <!-- Login -->
+            <Label text='Login' class="h3 text-center" textWrap="true"/>
+            <!-- Login(Web browser style) -->
+            <Button text="Login(Web browser style)" tap="loginWebBrowserStyle" class="btn btn-primary btn-active"/>
+            <!-- Login(Using an options object) -->
+            <Button text="Login(Using an options object)" tap="loginUsingAnOptionsObject" class="btn btn-primary btn-active"/>
+            <!-- Action -->
+            <Label text='Action' class="h3 text-center" textWrap="true"/>
+            <!-- Action(Web browser style) -->
+            <Button text="Action(Web browser style)" tap="actionWebBrowserStyle" class="btn btn-primary btn-active"/>
+            <!-- Action(Using an options object) -->
+            <Button text="Action(Using an options object)" tap="actionUsingAnOptionsObject" class="btn btn-primary btn-active"/>
+        </StackLayout>
+    </ScrollView>
+</Page>
