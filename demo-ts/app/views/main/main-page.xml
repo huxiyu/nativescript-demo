@@ -42,6 +42,11 @@ https://docs.nativescript.org/ui/components.
             <Button text="StackLayout2" tap="frameButtonTap" framename="stacklayout2" class="btn btn-primary btn-active"/>
             <Button text="WrapLayout1" tap="frameButtonTap" framename="wraplayout1" class="btn btn-primary btn-active"/>
             <Button text="FlexboxLayout1" tap="frameButtonTap" framename="flexboxlayout1" class="btn btn-primary btn-active"/>
+            <!-- Tap Count -->
+            <Label text="Tap Count" class="h2 text-center"/>
+            <Button text="TAP1" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
+            <Button text="TAP2" tap="buttonTap" class="btn btn-primary btn-active"/>
+            <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
             <!-- Images -->
             <Label text="Images" class="h2 text-center"/>
             <Button text="Images1" tap="frameButtonTap" framename="images1" class="btn btn-primary btn-active"/>
@@ -57,11 +62,9 @@ https://docs.nativescript.org/ui/components.
             <Button text="Gestures(Rotation)" tap="frameButtonTap" framename="gestures5" class="btn btn-primary btn-active"/>
             <Button text="Gestures(Touch)" tap="frameButtonTap" framename="gestures6" class="btn btn-primary btn-active"/>
             <Button text="Gestures(Mix Gestures)" tap="frameButtonTap" framename="gestures7" class="btn btn-primary btn-active"/>
-            <!-- Tap Count -->
-            <Label text="Tap Count" class="h2 text-center"/>
-            <Button text="TAP1" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
-            <Button text="TAP2" tap="buttonTap" class="btn btn-primary btn-active"/>
-            <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
+            <!-- Animations -->
+            <Label text="Animations" class="h2 text-center"/>
+            <Button text="Animations1" tap="frameButtonTap" framename="animations1" class="btn btn-primary btn-active"/>
         </StackLayout>
     </ScrollView>
 </Page>

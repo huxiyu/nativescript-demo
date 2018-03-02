@@ -1,0 +1,44 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="Animations1" icon="" class="action-bar"></ActionBar>
+    </Page.actionBar>
+    <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
+        <StackLayout orientation="vertical" backgroundColor="gray">
+            <!-- Hello world example -->
+            <Label text="Hello world example" class="h2 text-center" background="skyblue" />
+            <!-- Example 1: Changing background color animation with code. -->
+            <Label text='Example 1: Changing background color animation with code.' class="h3 text-center" textWrap="true"/>
+            <StackLayout id="example1layout" orientation="vertical" verticalAlignment="center" width="200" height="200">
+                <Label text="{ Tap it! }" horizontalAlignment="center" class="h3" backgroundColor="white" />
+            </StackLayout>
+            <!-- Example 2: Changing background color animation with CSS. -->
+            <Label text='Example 2: Changing background color animation with CSS.' class="h3 text-center" textWrap="true"/>
+            <StackLayout class="view2" orientation="vertical" verticalAlignment="center" width="200" height="200"></StackLayout>
+            <!-- Animation curves -->
+            <Label text="Animation curves" class="h2 text-center" background="skyblue" />
+            <!-- Example 3: How to customize the animation timing function -->
+            <Label text='Example 3: How to customize the animation timing function' class="h3 text-center" textWrap="true"/>
+            <StackLayout id="example3layout"  orientation="vertical" verticalAlignment="center" width="100%" height="200" backgroundColor="white">
+                <Label text="{ Tap it! }" horizontalAlignment="center" class="h3" backgroundColor="white" />
+                <Image id="image3" class="view3" src="~/images/icon.png" width="57" height="57"  horizontalAlignment="left" />
+            </StackLayout>
+            <!-- Example 4: How to create own animation curve via cubic Bezier -->
+            <Label text='Example 4: How to create own animation curve via cubic Bezier' class="h3 text-center" textWrap="true"/>
+            <StackLayout id="example4layout"  orientation="vertical" verticalAlignment="center" width="100%" height="200" backgroundColor="white">
+                <Label text="{ Tap it! }" horizontalAlignment="center" class="h3" backgroundColor="white" />
+                <Image id="image4" class="view4" src="~/images/icon.png" width="57" height="57"  horizontalAlignment="left" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>

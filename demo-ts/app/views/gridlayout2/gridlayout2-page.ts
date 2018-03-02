@@ -4,11 +4,7 @@ a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
 
-import { Color } from "color";
 import { EventData } from "data/observable";
-import { Button } from "ui/button";
-import { Label } from "ui/label";
-import { GridLayout, GridUnitType, ItemSpec } from "ui/layouts/grid-layout";
 import { Page } from "ui/page";
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
