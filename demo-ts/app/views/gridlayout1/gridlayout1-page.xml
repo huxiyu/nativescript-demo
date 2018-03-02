@@ -11,7 +11,7 @@ https://docs.nativescript.org/ui/components.
     http://docs.nativescript.org/ui/action-bar
     -->
     <Page.actionBar>
-        <ActionBar title="gridlayout1" icon="" class="action-bar"></ActionBar>
+        <ActionBar title="GridLayout1" icon="" class="action-bar"></ActionBar>
     </Page.actionBar>
 
    <GridLayout rows="*, auto" columns="250, *">

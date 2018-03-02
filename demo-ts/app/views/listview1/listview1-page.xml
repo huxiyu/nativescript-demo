@@ -11,7 +11,7 @@ https://docs.nativescript.org/ui/components.
     http://docs.nativescript.org/ui/action-bar
     -->
     <Page.actionBar>
-        <ActionBar title="listview1" icon="" class="action-bar"></ActionBar>
+        <ActionBar title="ListView1" icon="" class="action-bar"></ActionBar>
     </Page.actionBar>
 
     <ListView id="listView1" items="{{ myItems }}">

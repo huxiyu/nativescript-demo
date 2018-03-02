@@ -1,27 +1,30 @@
 {
-	"description": "NativeScript Application",
-	"license": "SEE LICENSE IN <your-license-filename>",
-	"readme": "NativeScript Application",
-	"repository": "<fill-your-repository-here>",
-	"scripts": {
-		"start": "tns run android"
-	},
-	"nativescript": {
-		"id": "org.nativescript.demots",
-		"tns-android": {
-			"version": "3.4.1"
-		}
-	},
-	"dependencies": {
-		"nativescript-theme-core": "~1.0.4",
-		"tns-core-modules": "~3.4.0"
-	},
-	"devDependencies": {
-		"babel-traverse": "6.4.5",
-		"babel-types": "6.4.5",
-		"babylon": "6.4.5",
-		"lazy": "1.0.11",
-		"nativescript-dev-typescript": "~0.6.0",
-		"typescript": "~2.4.2"
-	}
+    "name": "demo-ts",
+    "version": "1.0.0",
+    "description": "NativeScript Demo",
+    "license": "MIT License",
+    "readme": "NativeScript Demo",
+    "repository": "https://github.com/huxiyu/nativescript-demo.git",
+    "scripts": {
+        "tslint": "tslint -p tsconfig.json",
+        "start": "tns run android"
+    },
+    "nativescript": {
+        "id": "org.nativescript.demots",
+        "tns-android": {
+            "version": "3.4.1"
+        }
+    },
+    "dependencies": {
+        "nativescript-theme-core": "~1.0.4",
+        "tns-core-modules": "~3.4.1"
+    },
+    "devDependencies": {
+        "babel-traverse": "6.4.5",
+        "babel-types": "6.4.5",
+        "babylon": "6.4.5",
+        "lazy": "1.0.11",
+        "nativescript-dev-typescript": "~0.6.0",
+        "typescript": "~2.7.2"
+    }
 }

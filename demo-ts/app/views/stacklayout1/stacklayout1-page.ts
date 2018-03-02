@@ -4,8 +4,8 @@ a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
 
-import { EventData } from 'data/observable';
-import { Page } from 'ui/page';
+import { EventData } from "data/observable";
+import { Page } from "ui/page";
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
@@ -14,8 +14,8 @@ export function navigatingTo(args: EventData) {
     view the API reference of the Page to see what’s available at
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
-    let page = <Page>args.object;
-    
+    const page = args.object as Page;
+
     /*
     A page’s bindingContext is an object that should be used to perform
     data binding between XML markup and TypeScript code. Properties
@@ -32,5 +32,5 @@ export function navigatingTo(args: EventData) {
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: EventData) {
     // Get the event sender
-    let page = <Page>args.object;
+    const page = args.object as Page;
 }

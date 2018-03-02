@@ -5,8 +5,8 @@ logic, and to set up your page’s data binding.
 */
 
 import { EventData } from "data/observable";
-import { Page } from "ui/page";
 import * as dialogs from "ui/dialogs";
+import { Page } from "ui/page";
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
@@ -15,15 +15,14 @@ export function navigatingTo(args: EventData) {
     view the API reference of the Page to see what’s available at
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
-    const page = <Page>args.object;
+    const page = args.object as Page;
 
 }
 
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: EventData) {
     // Add Grid to StackLayout
-    const page = <Page>args.object;
-
+    const page = args.object as Page;
 }
 
 // Alert(Web browser style)
@@ -36,9 +35,9 @@ export function alertWebBrowserStyle(args) {
 // Alert(Using an options object)
 export function alertUsingAnOptionsObject(args) {
     dialogs.alert({
-        title: "Your title",
         message: "Your message",
-        okButtonText: "Your button text"
+        okButtonText: "Your button text",
+        title: "Your title",
     }).then(() => {
         console.log("Dialog closed!");
     });
@@ -46,7 +45,7 @@ export function alertUsingAnOptionsObject(args) {
 
 // Confirem(Web browser style)
 export function confirmWebBrowserStyle(args) {
-    dialogs.confirm("Your message").then(result => {
+    dialogs.confirm("Your message").then((result) => {
         console.log("Dialog result: " + result);
     });
 }
@@ -54,12 +53,12 @@ export function confirmWebBrowserStyle(args) {
 // Confirem(Using an options object)
 export function confirmUsingAnOptionsObject(args) {
     dialogs.confirm({
-        title: "Your title",
-        message: "Your message",
-        okButtonText: "Your button text",
         cancelButtonText: "Cancel text",
-        neutralButtonText: "Neutral text"
-    }).then(result => {
+        message: "Your message",
+        neutralButtonText: "Neutral text",
+        okButtonText: "Your button text",
+        title: "Your title",
+    }).then((result) => {
         // result argument is boolean
         console.log("Dialog result: " + result);
     });
@@ -68,7 +67,7 @@ export function confirmUsingAnOptionsObject(args) {
 // Prompt(Web browser style)
 export function promptWebBrowserStyle(args) {
     // Second argument is optional.
-    dialogs.prompt("Your message", "Default text").then(r => {
+    dialogs.prompt("Your message", "Default text").then((r) => {
         console.log("Dialog result: " + r.result + ", text: " + r.text);
     });
 }
@@ -77,14 +76,14 @@ export function promptWebBrowserStyle(args) {
 export function promptUsingAnOptionsObject(args) {
     // inputType property can be dialogs.inputType.password or dialogs.inputType.text.
     dialogs.prompt({
-        title: "Your title",
-        message: "Your message",
-        okButtonText: "Your button text",
         cancelButtonText: "Cancel text",
-        neutralButtonText: "Neutral text",
         defaultText: "Default text",
-        inputType: dialogs.inputType.password
-    }).then(r => {
+        inputType: dialogs.inputType.password,
+        message: "Your message",
+        neutralButtonText: "Neutral text",
+        okButtonText: "Your button text",
+        title: "Your title",
+    }).then((r) => {
         console.log("Dialog result: " + r.result + ", text: " + r.text);
     });
 }
@@ -92,7 +91,7 @@ export function promptUsingAnOptionsObject(args) {
 // Login(Web browser style)
 export function loginWebBrowserStyle(args) {
     // User name and password arguments are optional.
-    dialogs.login("Your message", "User name label text", "Password label text").then(r => {
+    dialogs.login("Your message", "User name label text", "Password label text").then((r) => {
         console.log("Dialog result: " + r.result + ", user: " + r.userName + ", pwd: " + r.password);
     });
 }
@@ -100,26 +99,26 @@ export function loginWebBrowserStyle(args) {
 // Login(Using an options object)
 export function loginUsingAnOptionsObject(args) {
     dialogs.login({
-        title: "Your title",
-        message: "Your message",
-        okButtonText: "Your button text",
         cancelButtonText: "Cancel button text",
+        message: "Your message",
         neutralButtonText: "Neutral button text",
+        okButtonText: "Your button text",
+        password: "Password label text",
+        title: "Your title",
         userName: "User name label text",
-        password: "Password label text"
-    }).then(r => {
+    }).then((r) => {
         console.log("Dialog result: " + r.result + ", user: " + r.userName + ", pwd: " + r.password);
     });
 }
 
 // Action(Web browser style)
 export function actionWebBrowserStyle(args) {
-    dialogs.action("Your message", "Cancel button text", ["Option1", "Option2"]).then(result => {
+    dialogs.action("Your message", "Cancel button text", ["Option1", "Option2"]).then((result) => {
         console.log("Dialog result: " + result);
-        if (result == "Options1") {
-            //Do action1
-        } else if (result == "Option2") {
-            //Do action2
+        if (result === "Options1") {
+            // Do action1
+        } else if (result === "Option2") {
+            // Do action2
         }
     });
 }
@@ -127,18 +126,15 @@ export function actionWebBrowserStyle(args) {
 // Action(Using an options object)
 export function actionUsingAnOptionsObject(args) {
     dialogs.action({
-        message: "Your message",
+        actions: ["Option1", "Option2"],
         cancelButtonText: "Cancel text",
-        actions: ["Option1", "Option2"]
-    }).then(result => {
+        message: "Your message",
+    }).then((result) => {
         console.log("Dialog result: " + result);
-        if (result == "Options1") {
-            //Do action1
-        } else if (result == "Option2") {
-            //Do action2
+        if (result === "Options1") {
+            // Do action1
+        } else if (result === "Option2") {
+            // Do action2
         }
     });
 }
-
-
-

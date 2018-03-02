@@ -7,11 +7,11 @@ logic, and to set up your page’s data binding.
 import { Color } from "color";
 import { EventData } from "data/observable";
 import { Button } from "ui/button";
+import * as view from "ui/core/view";
 import { Label } from "ui/label";
 import { GridLayout, GridUnitType, ItemSpec } from "ui/layouts/grid-layout";
-import { Page } from "ui/page";
-import * as view from 'ui/core/view';
 import { StackLayout } from "ui/layouts/stack-layout";
+import { Page } from "ui/page";
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
@@ -20,13 +20,11 @@ export function navigatingTo(args: EventData) {
     view the API reference of the Page to see what’s available at
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
-   const page = <Page>args.object;
-    
+   const page = args.object as Page;
 }
 
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: EventData) {
    // Add Grid to StackLayout
-   const page = <Page>args.object;
-
+   const page = args.object as Page;
 }

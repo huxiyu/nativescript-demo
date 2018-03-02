@@ -4,10 +4,10 @@ a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
 
-import { EventData } from 'data/observable';
-import { Page } from 'ui/page';
-import * as view from 'ui/core/view';
-import { TabView } from 'ui/tab-view';
+import { EventData } from "data/observable";
+import * as view from "ui/core/view";
+import { Page } from "ui/page";
+import { TabView } from "ui/tab-view";
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
@@ -16,8 +16,8 @@ export function navigatingTo(args: EventData) {
     view the API reference of the Page to see what’s available at
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
-    let page = <Page>args.object;
-    
+    const page = args.object as Page;
+
     /*
     A page’s bindingContext is an object that should be used to perform
     data binding between XML markup and TypeScript code. Properties
@@ -34,7 +34,7 @@ export function navigatingTo(args: EventData) {
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: EventData) {
     // Get the event sender
-    let page = <Page>args.object;
-    let tabView1 = <TabView>view.getViewById(page, "tabView1");
+    const page = args.object as Page;
+    const tabView1 = view.getViewById(page, "tabView1") as TabView;
     tabView1.selectedIndex = 2;
 }

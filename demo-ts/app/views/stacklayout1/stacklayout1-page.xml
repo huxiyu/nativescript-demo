@@ -11,7 +11,7 @@ https://docs.nativescript.org/ui/components.
     http://docs.nativescript.org/ui/action-bar
     -->
     <Page.actionBar>
-        <ActionBar title="stacklayout1" icon="" class="action-bar"></ActionBar>
+        <ActionBar title="StackLayout1" icon="" class="action-bar"></ActionBar>
     </Page.actionBar>
 
     <StackLayout orientation="horizontal"> <!-- orientation="vertical" -->

@@ -1,0 +1,38 @@
+"use strict";
+/*
+In NativeScript, a file with the same name as an XML file is known as
+a code-behind file. The code-behind is a great place to place your view
+logic, and to set up your page’s data binding.
+*/
+Object.defineProperty(exports, "__esModule", { value: true });
+var view = require("ui/core/view");
+// Event handler for Page "navigatingTo" event attached in main-page.xml
+function navigatingTo(args) {
+    /*
+    This gets a reference this page’s <Page> UI component. You can
+    view the API reference of the Page to see what’s available at
+    https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
+    */
+    var page = args.object;
+}
+exports.navigatingTo = navigatingTo;
+// Event handler for Page "loaded" event attached in main-page.xml
+function pageLoaded(args) {
+    // Add Grid to StackLayout
+    var page = args.object;
+    // tip label
+    var tipLabel = view.getViewById(page, "tipLabel");
+    tipLabel.text = "Result: None";
+    /**
+     * Mix Gestures: Since the release of NativeScript 1.3,
+     * when subscribing you can use gestures names,
+     * comma separated gestures names and/or even mix with events.
+     */
+    var gesturelayout = view.getViewById(page, "gesturelayout");
+    gesturelayout.on("loaded, tap, doubleTap, longPress", function (argv) {
+        console.log("Event: " + argv.eventName + ", sender: " + argv.object);
+        tipLabel.text = "Result: " + argv.eventName;
+    });
+}
+exports.pageLoaded = pageLoaded;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZ2VzdHVyZXM3LXBhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJnZXN0dXJlczctcGFnZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7Ozs7RUFJRTs7QUFHRixtQ0FBcUM7QUFNckMsd0VBQXdFO0FBQ3hFLHNCQUE2QixJQUFlO0lBQ3hDOzs7O01BSUU7SUFDRixJQUFNLElBQUksR0FBRyxJQUFJLENBQUMsTUFBYyxDQUFDO0FBQ3JDLENBQUM7QUFQRCxvQ0FPQztBQUVELGtFQUFrRTtBQUNsRSxvQkFBMkIsSUFBZTtJQUN0QywwQkFBMEI7SUFDMUIsSUFBTSxJQUFJLEdBQUcsSUFBSSxDQUFDLE1BQWMsQ0FBQztJQUVqQyxZQUFZO0lBQ1osSUFBTSxRQUFRLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEVBQUUsVUFBVSxDQUFzQixDQUFDO0lBQ3pFLFFBQVEsQ0FBQyxJQUFJLEdBQUcsY0FBYyxDQUFDO0lBRS9COzs7O09BSUc7SUFDSCxJQUFNLGFBQWEsR0FBRyxJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksRUFBRSxlQUFlLENBQW1CLENBQUM7SUFDaEYsYUFBYSxDQUFDLEVBQUUsQ0FBQyxtQ0FBbUMsRUFBRSxVQUFDLElBQXNCO1FBQ3pFLE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxTQUFTLEdBQUcsWUFBWSxHQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUNyRSxRQUFRLENBQUMsSUFBSSxHQUFHLFVBQVUsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDO0lBQ2hELENBQUMsQ0FBQyxDQUFDO0FBQ1AsQ0FBQztBQWxCRCxnQ0FrQkMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuSW4gTmF0aXZlU2NyaXB0LCBhIGZpbGUgd2l0aCB0aGUgc2FtZSBuYW1lIGFzIGFuIFhNTCBmaWxlIGlzIGtub3duIGFzXG5hIGNvZGUtYmVoaW5kIGZpbGUuIFRoZSBjb2RlLWJlaGluZCBpcyBhIGdyZWF0IHBsYWNlIHRvIHBsYWNlIHlvdXIgdmlld1xubG9naWMsIGFuZCB0byBzZXQgdXAgeW91ciBwYWdl4oCZcyBkYXRhIGJpbmRpbmcuXG4qL1xuXG5pbXBvcnQgeyBFdmVudERhdGEgfSBmcm9tIFwiZGF0YS9vYnNlcnZhYmxlXCI7XG5pbXBvcnQgKiBhcyB2aWV3IGZyb20gXCJ1aS9jb3JlL3ZpZXdcIjtcbmltcG9ydCB7IEdlc3R1cmVFdmVudERhdGEsIEdlc3R1cmVUeXBlcyB9IGZyb20gXCJ1aS9nZXN0dXJlc1wiO1xuaW1wb3J0ICogYXMgbGFiZWxNb2R1bGUgZnJvbSBcInVpL2xhYmVsXCI7XG5pbXBvcnQgeyBBYnNvbHV0ZUxheW91dCB9IGZyb20gXCJ1aS9sYXlvdXRzL2Fic29sdXRlLWxheW91dFwiO1xuaW1wb3J0IHsgUGFnZSB9IGZyb20gXCJ1aS9wYWdlXCI7XG5cbi8vIEV2ZW50IGhhbmRsZXIgZm9yIFBhZ2UgXCJuYXZpZ2F0aW5nVG9cIiBldmVudCBhdHRhY2hlZCBpbiBtYWluLXBhZ2UueG1sXG5leHBvcnQgZnVuY3Rpb24gbmF2aWdhdGluZ1RvKGFyZ3M6IEV2ZW50RGF0YSkge1xuICAgIC8qXG4gICAgVGhpcyBnZXRzIGEgcmVmZXJlbmNlIHRoaXMgcGFnZeKAmXMgPFBhZ2U+IFVJIGNvbXBvbmVudC4gWW91IGNhblxuICAgIHZpZXcgdGhlIEFQSSByZWZlcmVuY2Ugb2YgdGhlIFBhZ2UgdG8gc2VlIHdoYXTigJlzIGF2YWlsYWJsZSBhdFxuICAgIGh0dHBzOi8vZG9jcy5uYXRpdmVzY3JpcHQub3JnL2FwaS1yZWZlcmVuY2UvY2xhc3Nlcy9fdWlfcGFnZV8ucGFnZS5odG1sXG4gICAgKi9cbiAgICBjb25zdCBwYWdlID0gYXJncy5vYmplY3QgYXMgUGFnZTtcbn1cblxuLy8gRXZlbnQgaGFuZGxlciBmb3IgUGFnZSBcImxvYWRlZFwiIGV2ZW50IGF0dGFjaGVkIGluIG1haW4tcGFnZS54bWxcbmV4cG9ydCBmdW5jdGlvbiBwYWdlTG9hZGVkKGFyZ3M6IEV2ZW50RGF0YSkge1xuICAgIC8vIEFkZCBHcmlkIHRvIFN0YWNrTGF5b3V0XG4gICAgY29uc3QgcGFnZSA9IGFyZ3Mub2JqZWN0IGFzIFBhZ2U7XG5cbiAgICAvLyB0aXAgbGFiZWxcbiAgICBjb25zdCB0aXBMYWJlbCA9IHZpZXcuZ2V0Vmlld0J5SWQocGFnZSwgXCJ0aXBMYWJlbFwiKSBhcyBsYWJlbE1vZHVsZS5MYWJlbDtcbiAgICB0aXBMYWJlbC50ZXh0ID0gXCJSZXN1bHQ6IE5vbmVcIjtcblxuICAgIC8qKlxuICAgICAqIE1peCBHZXN0dXJlczogU2luY2UgdGhlIHJlbGVhc2Ugb2YgTmF0aXZlU2NyaXB0IDEuMyxcbiAgICAgKiB3aGVuIHN1YnNjcmliaW5nIHlvdSBjYW4gdXNlIGdlc3R1cmVzIG5hbWVzLFxuICAgICAqIGNvbW1hIHNlcGFyYXRlZCBnZXN0dXJlcyBuYW1lcyBhbmQvb3IgZXZlbiBtaXggd2l0aCBldmVudHMuXG4gICAgICovXG4gICAgY29uc3QgZ2VzdHVyZWxheW91dCA9IHZpZXcuZ2V0Vmlld0J5SWQocGFnZSwgXCJnZXN0dXJlbGF5b3V0XCIpIGFzIEFic29sdXRlTGF5b3V0O1xuICAgIGdlc3R1cmVsYXlvdXQub24oXCJsb2FkZWQsIHRhcCwgZG91YmxlVGFwLCBsb25nUHJlc3NcIiwgKGFyZ3Y6IEdlc3R1cmVFdmVudERhdGEpID0+IHtcbiAgICAgICAgY29uc29sZS5sb2coXCJFdmVudDogXCIgKyBhcmd2LmV2ZW50TmFtZSArIFwiLCBzZW5kZXI6IFwiICsgYXJndi5vYmplY3QpO1xuICAgICAgICB0aXBMYWJlbC50ZXh0ID0gXCJSZXN1bHQ6IFwiICsgYXJndi5ldmVudE5hbWU7XG4gICAgfSk7XG59XG4iXX0=

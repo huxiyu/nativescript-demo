@@ -48,6 +48,15 @@ https://docs.nativescript.org/ui/components.
             <!-- Dialogs -->
             <Label text="Dialogs" class="h2 text-center"/>
             <Button text="Dialogs1" tap="frameButtonTap" framename="dialogs1" class="btn btn-primary btn-active"/>
+            <!-- Gestures -->
+            <Label text="Gestures" class="h2 text-center"/>
+            <Button text="Gestures(Tap & Double Tap & Long Press)" tap="frameButtonTap" framename="gestures1" class="btn btn-primary btn-active"/>
+            <Button text="Gestures(Swipe)" tap="frameButtonTap" framename="gestures2" class="btn btn-primary btn-active"/>
+            <Button text="Gestures(Pan)" tap="frameButtonTap" framename="gestures3" class="btn btn-primary btn-active"/>
+            <Button text="Gestures(Pinch)" tap="frameButtonTap" framename="gestures4" class="btn btn-primary btn-active"/>
+            <Button text="Gestures(Rotation)" tap="frameButtonTap" framename="gestures5" class="btn btn-primary btn-active"/>
+            <Button text="Gestures(Touch)" tap="frameButtonTap" framename="gestures6" class="btn btn-primary btn-active"/>
+            <Button text="Gestures(Mix Gestures)" tap="frameButtonTap" framename="gestures7" class="btn btn-primary btn-active"/>
             <!-- Tap Count -->
             <Label text="Tap Count" class="h2 text-center"/>
             <Button text="TAP1" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
