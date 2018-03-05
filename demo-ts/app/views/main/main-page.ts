@@ -12,7 +12,7 @@ import { Page } from "ui/page";
 import { MainModel } from "../../view_models/main/main-view-model";
 // To import the "ui/frame" module:
 
-const context = new MainModel();
+let context;
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
@@ -36,7 +36,8 @@ export function navigatingTo(args: EventData) {
     https://docs.nativescript.org/core-concepts/data-binding.
     */
     // page.bindingContext = new MainModel();
-    if (!page.bindingContext) {
+    if (!context) {
+        context = new MainModel();
         console.log("初始化 context");
         page.bindingContext = context;
     }

@@ -29,7 +29,14 @@ components that have the btn class name.
     font-size: 18;
 }
 
+Label {
+    /* Custom fonts */
+    font-family: "PingFang-SC-Semibold";
+}
+
 Button {
     /* uppercase lowercase capitalize none*/
     text-transform: none;
+    /* Custom fonts */
+    font-family: "PingFang-SC-Semibold";
 }

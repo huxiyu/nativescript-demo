@@ -1,0 +1,20 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="Action Items Visibility" icon="" class="action-bar">
+            <ActionItem tap="onEdit" ios.systemIcon="2" android.systemIcon="ic_menu_edit" ios.position="right" visibility="{{ isEditing ? 'collapse' : 'visible' }}"/>
+            <ActionItem tap="onSave" ios.systemIcon="3" android.systemIcon="ic_menu_save" ios.position="right" visibility="{{ isEditing ? 'visible' : 'collapse' }}"/>
+            <ActionItem tap="onCancel" ios.systemIcon="1" android.systemIcon="ic_menu_close_clear_cancel" visibility="{{ isEditing ? 'visible' : 'collapse' }}"/>
+        </ActionBar>
+    </Page.actionBar>
+</Page>

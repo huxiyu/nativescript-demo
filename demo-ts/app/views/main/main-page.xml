@@ -68,6 +68,14 @@ https://docs.nativescript.org/ui/components.
             <!-- Placeholder -->
             <Label text="Placeholder" class="h2 text-center"/>
             <Button text="Placeholder1" tap="frameButtonTap" framename="placeholder1" class="btn btn-primary btn-active"/>
+            <!-- Action Bar -->
+            <Label text="ActionBar" class="h2 text-center"/>
+            <Button text="Using a Custom Title View" tap="frameButtonTap" framename="actionbar1" class="btn btn-primary btn-active"/>
+            <Button text="Action Items Visibility" tap="frameButtonTap" framename="actionbar2" class="btn btn-primary btn-active"/>
+            <Button text="Creating SideDrawer Button" tap="frameButtonTap" framename="actionbar3" class="btn btn-primary btn-active"/>
+            <!-- Action Bar -->
+            <Label text="Icon Fonts" class="h2 text-center"/>
+            <Button text="Icon Font" tap="frameButtonTap" framename="iconfonts1" class="btn btn-primary btn-active"/>
         </StackLayout>
     </ScrollView>
 </Page>

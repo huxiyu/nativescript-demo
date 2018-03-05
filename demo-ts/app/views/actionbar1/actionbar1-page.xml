@@ -1,0 +1,27 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="test" icon="" class="action-bar">
+            <NavigationButton text="Go Back" icon="~/images/nativescript_logo.jpg" android.systemIcon="ic_menu_back" tap="onNavBtnTap"/>
+            <ActionItem tap="onShare" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar"></ActionItem>
+            <ActionItem tap="onDelete" ios.systemIcon="16" ios.position="right" text="delete" android.position="popup"></ActionItem>
+            <StackLayout class="layout1" orientation="horizontal" ios:horizontalAlignment="center" android:horizontalAlignment="center">
+                <Image src="~/images/nativescript_logo.jpg" class="action-image"></Image>
+                <Label text="ativeScript" class="action-label"></Label>
+            </StackLayout>
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout width="100%" height="100%" orientation="vertical" backgroundColor="white">
+        <Label text='' id="tipLabel" class="h2 text-left" width="100%" height="80" textWrap="true" backgroundColor="skyblue" />
+    </StackLayout>
+</Page>
