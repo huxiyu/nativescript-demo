@@ -1,0 +1,13 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+    <!--
+    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
+    http://docs.nativescript.org/ui/action-bar
+    -->
+    <Page.actionBar>
+        <ActionBar title="Placeholder" icon="" class="action-bar"></ActionBar>
+    </Page.actionBar>
+    <StackLayout>
+        <Placeholder creatingView="creatingView"/>
+    </StackLayout>
+</Page>

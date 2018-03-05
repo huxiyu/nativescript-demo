@@ -5,7 +5,7 @@ You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
 <Page 
-    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="false">
+    xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo" class="page" actionBarHidden="true">
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
@@ -65,6 +65,9 @@ https://docs.nativescript.org/ui/components.
             <!-- Animations -->
             <Label text="Animations" class="h2 text-center"/>
             <Button text="Animations1" tap="frameButtonTap" framename="animations1" class="btn btn-primary btn-active"/>
+            <!-- Placeholder -->
+            <Label text="Placeholder" class="h2 text-center"/>
+            <Button text="Placeholder1" tap="frameButtonTap" framename="placeholder1" class="btn btn-primary btn-active"/>
         </StackLayout>
     </ScrollView>
 </Page>

@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function creatingView(args) {
+    // let nativeView = new UILabel();
+    // nativeView.text = "Native";
+    // args.view = nativeView;
+}
+exports.creatingView = creatingView;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGxhY2Vob2xkZXIxLXBhZ2UuaW9zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsicGxhY2Vob2xkZXIxLXBhZ2UuaW9zLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEsc0JBQTZCLElBQXlCO0lBQ2xELGtDQUFrQztJQUNsQyw4QkFBOEI7SUFDOUIsMEJBQTBCO0FBQzlCLENBQUM7QUFKRCxvQ0FJQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENyZWF0ZVZpZXdFdmVudERhdGEgfSBmcm9tIFwidWkvcGxhY2Vob2xkZXJcIjtcclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGluZ1ZpZXcoYXJnczogQ3JlYXRlVmlld0V2ZW50RGF0YSkge1xyXG4gICAgLy8gbGV0IG5hdGl2ZVZpZXcgPSBuZXcgVUlMYWJlbCgpO1xyXG4gICAgLy8gbmF0aXZlVmlldy50ZXh0ID0gXCJOYXRpdmVcIjtcclxuICAgIC8vIGFyZ3MudmlldyA9IG5hdGl2ZVZpZXc7XHJcbn0iXX0=
