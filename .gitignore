@@ -58,3 +58,4 @@ typings/
 .env
 
 demo-ts/platforms/
+core-concepts-ts/platforms/

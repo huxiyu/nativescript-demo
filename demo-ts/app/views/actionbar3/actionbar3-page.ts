@@ -5,7 +5,10 @@ logic, and to set up your page’s data binding.
 */
 import { EventData, Observable } from "data/observable";
 import * as view from "ui/core/view";
+import * as labelModule from "ui/label";
 import { Page } from "ui/page";
+
+let tipLabel: labelModule.Label;
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
@@ -20,9 +23,15 @@ export function navigatingTo(args: EventData) {
 // Event handler for Page "loaded" event attached in main-page.xml
 export function pageLoaded(args: EventData) {
     const page = args.object as Page;
+
+    // tip label
+    tipLabel = view.getViewById(page, "tipLabel") as labelModule.Label;
+    tipLabel.text = "";
 }
 
 export function showSideDrawer(args: EventData) {
     console.log("Show SideDrawer tapped.");
+
     // Show sidedrawer ...
+    tipLabel.text = "Show SideDrawer tapped.";
 }

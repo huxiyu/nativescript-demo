@@ -9,7 +9,7 @@ import * as frames from "ui/frame";
 import { GestureEventData } from "ui/gestures";
 // import { View } from "ui/core/view"
 import { Page } from "ui/page";
-import { MainModel } from "../../view_models/main/main-view-model";
+import { MainModel } from "../../models/main/main-view-model";
 // To import the "ui/frame" module:
 
 let context;

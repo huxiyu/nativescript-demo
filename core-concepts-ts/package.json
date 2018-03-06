@@ -1,0 +1,31 @@
+{
+    "name": "core-concepts-ts",
+    "version": "1.0.0",
+    "description": "NativeScript core concepts",
+    "license": "MIT License",
+    "readme": "NativeScript Application",
+    "repository": "https://github.com/huxiyu/nativescript-demo.git",
+    "scripts": {
+        "tslint": "tslint -p tsconfig.json",
+        "start": "tns run android"
+    },
+    "nativescript": {
+        "id": "org.nativescript.coreconceptsts",
+        "tns-android": {
+            "version": "3.4.2"
+        }
+    },
+    "dependencies": {
+        "nativescript-theme-core": "~1.0.4",
+        "tns-core-modules": "~3.4.0"
+    },
+    "devDependencies": {
+        "babel-traverse": "6.4.5",
+        "babel-types": "6.4.5",
+        "babylon": "6.4.5",
+        "lazy": "1.0.11",
+        "nativescript-dev-typescript": "~0.6.0",
+        "tns-platform-declarations": "^3.4.1",
+        "typescript": "^2.7.2"
+    }
+}
