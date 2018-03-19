@@ -1,0 +1,8 @@
+Label {
+    margin: 10;
+    horizontal-align: left;
+    vertical-align: center;
+    border-width: 5;
+    border-style: solid;
+    border-color: #ffff00;
+}

@@ -1,0 +1,3 @@
+<Page loaded="onPageLoaded">
+  <Label text="Hello, world! Create page with XML."/>
+</Page>

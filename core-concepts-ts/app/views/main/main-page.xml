@@ -4,14 +4,14 @@ of which NativeScript renders with a platform-specific iOS or Android native con
 You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
     -->
     <Page.actionBar>
-        <ActionBar title="My App" icon="" class="action-bar">
-        </ActionBar>
+        <ActionBar title="Main" icon="" class="action-bar"></ActionBar>
     </Page.actionBar>
     <!--
     The StackLayout stacks UI components on the screen—either vertically or horizontally.
@@ -24,9 +24,18 @@ https://docs.nativescript.org/ui/components.
     core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
     class names available for styling your app at https://docs.nativescript.org/ui/theme.
     -->
-    <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center"/>
-        <Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
-    </StackLayout>
+    <ScrollView id="scroll" orientation="vertical" isEnabled="true" width="100%" height="100%" backgroundColor="white">
+        <StackLayout class="p-20" orientation="vertical">
+            <!-- Architecture and Navigation -->
+            <Label text="Architecture and Navigation" class="h3 text-center" textWrap="true"/>
+            <Button text="Example 1: Create page with XML." tap="frameButtonTap" framename="pagemanagement1" class="btn btn-primary btn-active"/>
+            <Button text="Example 2: Create page via code." tap="frameButtonTap" framename="pagemanagement2" class="btn btn-primary btn-active"/>
+            <!-- Navigation -->
+            <Label text="Navigation" class="h3 text-center" textWrap="true"/>
+            <Button text="Navigate by page name(above all example)" tap="" class="btn btn-primary btn-active"/>
+            <Button text="Navigate using a function: Example 3: How to navigate to a page dynamically created via code." tap="navigate3Tap" class="btn btn-primary btn-active"/>
+            <Button text="Navigate and pass context: Example 4: How to pass content between different pages." tap="navigate4Tap" class="btn btn-primary btn-active"/>
+            <Button text="Navigate and set bindingContext to the page: Example 5: How to provide bindingContext automaticlly while navigating to a page." tap="navigate5Tap" class="btn btn-primary btn-active"/>
+        </StackLayout>
+    </ScrollView>
 </Page>
