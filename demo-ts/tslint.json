@@ -77,7 +77,8 @@
         "eofline": false,
         "no-console": [false],
         "only-arrow-functions": [false],
-        "space-before-function-paren": [false]
+        "space-before-function-paren": [false],
+        "no-string-literal": false
     },
     "rulesDirectory": []
 }

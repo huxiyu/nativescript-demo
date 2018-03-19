@@ -17,13 +17,13 @@ https://docs.nativescript.org/ui/components.
         <StackLayout id="stackLayout1" orientation="vertical" backgroundColor="skyblue">
             <!-- Load images from URL -->
             <Label text='Load images from URL' class="h3 text-center" textWrap="true"/>
-            <Image src="https://www.bugbiu.com/9a002d70b3d0f40e38e686433b8df0f5.png" stretch="none"/>
+            <Image src="https://www.bugbiu.com/9a002d70b3d0f40e38e686433b8df0f5.png" loadMode="async" stretch="none"/>
             <!-- Load images from local file system -->
             <Label text='Load images from local file system' class="h3 text-center" textWrap="true"/>
-            <Image src="~/images/logo.png" stretch="none" horizontalAlignment="center" />
+            <Image src="~/images/logo.png" loadMode="async" stretch="none" horizontalAlignment="center" />
             <!-- Load images from a resource -->
             <Label text='Load images from a resource' class="h3 text-center" textWrap="true"/>
-            <Image src="res://icon" stretch="none" horizontalAlignment="center" />
+            <Image src="res://icon" loadMode="async" stretch="none" horizontalAlignment="center" />
         </StackLayout>
     </ScrollView>
 </Page>
